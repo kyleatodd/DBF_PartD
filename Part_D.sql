@@ -115,3 +115,20 @@ SELECT * FROM purchased_pizza;
 
 /* Displays all elements in table: pizza */
 SELECT * FROM pizza;
+
+
+SELECT COUNT(order_ID) 
+FROM order_T 
+GROUP BY payment_Method 
+ORDER BY COUNT(order_ID) DESC;
+
+
+SELECT order_T.order_ID, purchased_pizza.order_ID
+FROM order_T
+INNER JOIN purchased_pizza ON order_T.order_ID = purchased_pizza.order_ID;
+
+/*SELECT pizza_ID
+FROM purchased_pizza
+WHERE order_ID IN (SELECT payment_Method
+				   FROM order_T
+				   WHERE payment_Method = "PayPal");*/
