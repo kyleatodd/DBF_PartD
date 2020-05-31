@@ -95,6 +95,23 @@ INSERT INTO purchased_pizza (quantity, order_ID, pizza_ID) VALUES ('2', '473kgh'
 
 
 /* Database Statements */
+SELECT COUNT(payment_Method) FROM order_T
+WHERE payment_Method='Paypal';
+
+SELECT COUNT(payment_Method) FROM order_T
+WHERE payment_Method='Cash';
+
+SELECT COUNT(payment_Method) FROM order_T
+WHERE payment_Method='Credit Card';
+
+---
+/* Displays all elements in table: order_T */
 SELECT * FROM order_T;
+
+/* Counts the amount of unique pizza's ordered */
+SELECT COUNT(DISTINCT pizza_ID) FROM purchased_pizza;
+/* Displays all elements in table: purchased_pizza */
 SELECT * FROM purchased_pizza;
+
+/* Displays all elements in table: pizza */
 SELECT * FROM pizza;
