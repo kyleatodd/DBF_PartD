@@ -96,7 +96,7 @@ INSERT INTO purchased_pizza (quantity, order_ID, pizza_ID) VALUES ('2', '473kgh'
 
 /* Database Statements */
 SELECT COUNT(payment_Method) FROM order_T
-WHERE payment_Method='Paypal';
+WHERE payment_Method='PayPal';
 
 SELECT COUNT(payment_Method) FROM order_T
 WHERE payment_Method='Cash';
